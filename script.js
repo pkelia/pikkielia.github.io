@@ -5,13 +5,14 @@ function initFirebase(){
   // ==== REPLACE the following object with YOUR firebase config ====
   // Create a Firebase project (instructions below) and paste the config here.
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-    projectId: "YOUR_PROJECT",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "SENDER_ID",
-    appId: "APP_ID"
+    apiKey: "AIzaSyBa0KpAP8TK7mYyqdYO_I_S5IWzcrbcutU",
+  authDomain: "christiananswer-979f0.firebaseapp.com",
+  databaseURL: "https://christiananswer-979f0-default-rtdb.firebaseio.com",
+  projectId: "christiananswer-979f0",
+  storageBucket: "christiananswer-979f0.appspot.com",
+  messagingSenderId: "443060144806",
+  appId: "1:443060144806:web:cd5908666f88fbfff08267"
+};
   };
   // ===== do not change below =====
   if(!window.firebase || !firebase.apps.length) {
@@ -129,4 +130,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   try {
     if(window.firebase) loadLeaderboardFromFirebase();
   } catch(e){ console.log('No firebase yet', e) }
+
 });
