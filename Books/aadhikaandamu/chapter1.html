@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ఆదికాండము - అధ్యాయం 1 (Quiz)</title>
+<link href="../../style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:'Noto Sans Telugu',sans-serif;background:#fff;margin:0;padding:18px}
+  .quiz-wrap{max-width:780px;margin:10px auto}
+  .quiz-question{font-weight:700;margin:14px 0}
+  .options{display:flex;flex-wrap:wrap;gap:10px}
+  .option{padding:10px;border-radius:8px;border:1px solid #ddd;cursor:pointer;background:#fff;min-width:40%}
+  .option.correct{background:#c8f7c5}
+  .option.wrong{background:#ffc8c8}
+  #score{margin-top:12px;font-weight:700}
+  input#username{padding:8px;border-radius:6px;border:1px solid #ddd}
+  .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .back {text-decoration:none;color:var(--orange);font-weight:700}
+</style>
+</head>
+<body>
+<div class="quiz-wrap">
+  <div class="topbar">
+    <a class="back" href="../adikandamu.html">← Back to chapters</a>
+    <div>ఆదికాండము - అధ్యాయం 1 (Quiz)</div>
+  </div>
+
+  <h2>Multiple Questions & Answers</h2>
+  <p>Enter your name and press Start</p>
+  <input id="username" placeholder="Your name"><button id="startBtn">Start Quiz</button>
+
+  <div id="quizArea" style="display:none;margin-top:12px">
+    <!-- Questions inserted here by script -->
+    <div id="questionsContainer"></div>
+    <div id="score">Score: 0/0</div>
+    <button id="submitScoreBtn">Submit Score</button>
+  </div>
+</div>
+
+<!-- Firebase (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<script src="../../script.js"></script>
+<script>
+/* chapter-specific question set (Genesis 1 sample) */
+const chapter1Questions = [
+  {q:"Q1: ఆదియందు దేవుడు ఏమి సృజించెను?", options:["a) చంద్రుడు","b) నక్షత్రాలు","c) భూమ్యాకాశములను","d) సూర్యుడు"], correct:2},
+  {q:"Q2: భూమి నిరాకారముగాను శూన్యముగాను ఉండెను అప్పుడు చీకటి దేనిపైన కమ్మియుండెను?", options:["a) ఆకాశము","b) గడ్డి","c) అగాధ జలము","d) పర్వతములు"], correct:2},
+  {q:"Q3: దేవుడు మొదటి దినమున ఏం చేసెను?", options:["a) జంతువులు","b) సముద్రం","c) వెలుగు","d) ఆకాశం"], correct:2},
+  {q:"Q4: దేవుడు రెండోవ దినమున ఏం చేసెను?", options:["a) గడ్డి","b) నరుడు","c) నక్షత్రాలు","d) విశాలము క్రింది జలములను వేరుపరచెను"], correct:3},
+  {q:"Q5: దేవుడు ఆ విశాలముకు ఏమని పేరు పెట్టెను?", options:["a) వెలుగు","b) సముద్రం","c) ఆకాశం","d) భూమి"], correct:2},
+  {q:"Q6: దేవుడు మూడోవ దినమున ఏది కనిపించెను?", options:["a) పర్వతములు","b) ఆరిన నేల","c) గడ్డి","d) సముద్రం"], correct:1},
+  {q:"Q7: దేవుడు మూడోవ దినమున ఇంకేమి చేసెను?", options:["a) నక్షత్రాలు","b) నరుడు","c) గడ్డిని, విత్తనములిచ్చు చెట్లను","d) జంతువులు"], correct:2},
+  {q:"Q8: దేవుడు నాలుగోవ దినమున ఏం చేసెను?", options:["a) సముద్రం","b) నరుడు","c) గడ్డి","d) పెద్ద జ్యోతి, చిన్న జ్యోతి"], correct:3},
+  {q:"Q9: దేవుడు 5వ దినమున ఏం చేసెను?", options:["a) నరుడు","b) గడ్డి","c) పర్వతములు","d) సముద్రంలో జీవులు, భూమి ఆకాశ పక్షులు"], correct:3},
+  {q:"Q10: దేవుడు వాటి వాటి జాతి ప్రకారము పుట్టించుగాకని ఎవరు పుట్టించారో?", options:["a) వెలుగు","b) సముద్రం","c) ఆకాశం","d) భూమి"], correct:3},
+  {q:"Q11: దేవుడు తన స్వరూపమందు ఎవరిని సృజించెను?", options:["a) గడ్డి","b) జంతువులు","c) నరుని","d) పక్షులు"], correct:2},
+  {q:"Q12: దేవుడు 6వ దినమున ఏం చేసెను?", options:["a) సముద్రం","b) పురుగు, జంతువు, నరులు","c) వెలుగు","d) ఆకాశం"], correct:1},
+  {q:"Q13: సముద్రములో ప్రతివాటిని, భూమి మీద ఉన్న ప్రతివాటిని ఏరాదిలో దేవుడు ఎవికి అధికారం ఇచ్చెను?", options:["a) గడ్డికి","b) జంతువులకు","c) నరులకు","d) పక్షులకు"], correct:2}
+];
+
+let currentQuestions = chapter1Questions;
+
+document.getElementById('startBtn').addEventListener('click', ()=>{
+  const name = document.getElementById('username').value.trim();
+  if(!name){ alert('Please enter your name'); return; }
+  document.getElementById('quizArea').style.display = 'block';
+  startChapterQuiz(currentQuestions, 'ఆదికాండము 1');
+});
+
+</script>
+</body>
+</html>
