@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Chapter 2 Quiz</title>
+
+  <!-- Firebase (compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu">
+    <div class="brand">Genesis Quiz</div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section section-sky">
+<div class="quiz-container">
+  <h2>ఆదికాండము — అధ్యాయము 2 Quiz</h2>
+  <p>ప్రతి ప్రశ్నకు ఒకే సమాధానం గుర్తించండి.</p>
+
+  <div class="quiz-question">1. ఆది లో దేవుడు ఏవి సృష్టించాడు?</div>
+  <div class="answer-option" data-q="1" data-correct="true">ఆకాశమును భూమిని</div>
+  <div class="answer-option" data-q="1" data-correct="false">మనిషిని మాత్రమే</div>
+  <div class="answer-option" data-q="1" data-correct="false">జంతువులను మాత్రమే</div>
+
+  <div class="quiz-question">2. మొదటి దినమున దేవుడు ఏది సృష్టించాడు?</div>
+  <div class="answer-option" data-q="2" data-correct="false">సూర్యుడు</div>
+  <div class="answer-option" data-q="2" data-correct="true">వెలుగు</div>
+  <div class="answer-option" data-q="2" data-correct="false">చంద్రుడు</div>
+
+  <div class="quiz-question">3. దేవుడు వెలుగును ఏ నుండి వేరు చేసాడు?</div>
+  <div class="answer-option" data-q="3" data-correct="true">అంధకారం నుండి</div>
+  <div class="answer-option" data-q="3" data-correct="false">మేఘముల నుండి</div>
+  <div class="answer-option" data-q="3" data-correct="false">నీటి నుండి</div>
+
+  <div class="quiz-question">4. ఆరు రోజుల్లో దేవుడు అన్నీ సృష్టించాడు. ఏడవ దినమున?</div>
+  <div class="answer-option" data-q="4" data-correct="true">విశ్రాంతి చేశాడు</div>
+  <div class="answer-option" data-q="4" data-correct="false">పక్షులను సృష్టించాడు</div>
+  <div class="answer-option" data-q="4" data-correct="false">న్యాయ తీర్పు చెప్పాడు</div>
+
+  <div class="quiz-question">5. మనిషిని దేవుడు ఎలాంటి స్వరూపములో సృష్టించాడు?</div>
+  <div class="answer-option" data-q="5" data-correct="false">జంతువులకు పోలికగా</div>
+  <div class="answer-option" data-q="5" data-correct="true">తన స్వరూపములో</div>
+  <div class="answer-option" data-q="5" data-correct="false">దూతల స్వరూపములో</div>
+
+  <div class="result-box"></div>
+  <button id="submit-btn" class="btn">Submit Quiz</button>
+
+  <div class="name-box">
+      <p>మీ పేరు నమోదు చేయండి:</p>
+      <input type="text" id="player-name" placeholder="Your Name">
+      <br><br>
+      <button id="save-score-btn" class="btn">Save Score</button>
+  </div>
+
+  <br>
+  <a href="index.html" class="btn">🏠 Back to Home</a>
+
+  <h3 style="margin-top:20px">Latest Scores</h3>
+  <div id="leaderboard"></div>
+</div>
+</section>
+</body>
+</html>

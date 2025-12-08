@@ -1,0 +1,227 @@
+/* Prevent horizontal scrolling */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0px;
+}
+
+/* Sections full width */
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Dropdown / input full width on mobile */
+select, input {
+    width: 100%;
+}
+
+/* Content container fix */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap');
+:root{
+  --dark:#111827;
+  --white:#ffffff;
+  --sky:#dff4ff;
+  --green:#e7f8f0;
+  --orange:#ffb347;
+}
+footer {
+    width: 100%;
+    display: block;
+    padding: 16px 10px; /* more vertical space */
+    padding-bottom: 20px; /* extra spacing */
+    position: relative; /* ensure it flows in page */
+}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans Telugu', 'Noto Sans', Arial, sans-serif;margin:0;color:#111}
+.site-header{background:var(--dark);color:var(--white);position:sticky;top:0;z-index:50}
+.menu{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
+.menu-list{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+.menu-list a{color:var(--white);text-decoration:none;padding:8px 10px;border-radius:6px}
+.menu-list a:hover{background:rgba(255,255,255,0.06)}
+.brand{font-weight:700}
+.section{padding:40px 16px}
+.section-sky{background:linear-gradient(180deg,var(--sky),#f7fbff);color:#000;position:relative;overflow:hidden}
+.bible-slide{position:absolute;left:100%;top:6px;width:200%;font-size:32px;opacity:0.5;white-space:nowrap;animation:slideBible 12s linear infinite}
+@keyframes slideBible{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+label{display:block;margin-top:12px}
+select{width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;margin-top:6px}
+.controls{margin-top:12px}
+.btn{display:inline-block;background:var(--dark);color:var(--white);padding:8px 14px;border-radius:6px;text-decoration:none}
+
+/* Christmas-style section */
+.section-christmas{background:linear-gradient(135deg,#fff7f0,#f0f7ff);position:relative}
+.welcome-anim{display:flex;align-items:center;gap:12px;padding-bottom:18px}
+.welcome-anim .man{font-size:48px;animation:wave 2s infinite}
+@keyframes wave{0%{transform:rotate(0)}25%{transform:rotate(12deg)}50%{transform:rotate(0)}75%{transform:rotate(-8deg)}100%{transform:rotate(0)}}
+.speech{font-weight:700}
+
+/* Leaderboard */
+#leaderboard{background:rgba(255,255,255,0.8);padding:10px;border-radius:8px;min-height:120px}
+.leader-row{display:flex;justify-content:space-between;padding:8px;border-bottom:1px dashed #ddd}
+
+/* Topics */
+.section-green{background:linear-gradient(135deg,var(--green),var(--sky))}
+
+/* Footer marquee */
+.site-footer{font-size: 16px;line-height: 22px; Line-width: 100%; /* ensures full text height visible */
+    background:linear-gradient(90deg,var(--orange),#ffd480);padding:10px;color:#000}
+.marquee{white-space:nowrap;overflow:visible}
+.marquee::after{content:'';display:inline-block;padding-left:100%}
+.marquee{animation:marquee 8s linear infinite}
+@keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* small screens */
+@media(max-width:640px){.menu-list{display:none}.menu{justify-content:space-between}}
+
+/* Quiz Page Styles */
+.quiz-container {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  max-width:600px;
+  margin:auto;
+}
+.quiz-question {
+  font-weight:bold;
+  margin:15px 0 5px;
+}
+.answer-option {
+  padding:8px 12px;
+  border:1px solid #555;
+  border-radius:6px;
+  margin:6px 0;
+  cursor:pointer;
+}
+.answer-option.selected {
+  background:#e7f7ff;
+  border-color:#0092ff;
+}
+.answer-option.correct {
+  background:#c8ffc8;
+  border-color:green;
+}
+.answer-option.wrong {
+  background:#ffd5d5;
+  border-color:red;
+}
+.result-box {
+  margin-top:20px;
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+}
+.name-box {
+  display:none;
+  margin-top:20px;
+  text-align:center;
+}
+.name-box input {
+  padding:8px;
+  width:80%;
+  border-radius:6px;
+  border:1px solid #777;
+}
+
+/* ---------- quiz & leaderboard styles (append to style.css) ---------- */
+
+.quiz-container {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  max-width:720px;
+  margin:20px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.quiz-question {
+  font-weight:700;
+  margin:14px 0 6px;
+}
+.answer-option {
+  padding:10px 12px;
+  border:1px solid #555;
+  border-radius:8px;
+  margin:8px 0;
+  cursor:pointer;
+  user-select:none;
+  transition: background .15s, border-color .15s, transform .06s;
+  background: #fff;
+}
+.answer-option:hover { transform: translateY(-1px); }
+.answer-option.selected {
+  background:#e7f7ff;
+  border-color:#0092ff;
+}
+.answer-option.correct {
+  background:#c8ffc8 !important;
+  border-color:green !important;
+  color:#064b06;
+  font-weight:700;
+}
+.answer-option.wrong {
+  background:#ffd5d5 !important;
+  border-color:#c42b2b !important;
+  color:#5b0000;
+  font-weight:700;
+}
+.result-box {
+  margin-top:18px;
+  text-align:center;
+  font-size:18px;
+  font-weight:700;
+}
+.name-box {
+  display:none;
+  margin-top:14px;
+  text-align:center;
+}
+.name-box input {
+  padding:8px;
+  width:80%;
+  max-width:360px;
+  border-radius:6px;
+  border:1px solid #777;
+}
+
+/* leaderboard */
+#leaderboard {
+  background: rgba(255,255,255,0.9);
+  padding:12px;
+  border-radius:8px;
+  min-height:80px;
+  margin-top:8px;
+}
+.leader-row {
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  align-items:center;
+  padding:8px 6px;
+  border-bottom:1px dashed #eee;
+}
+.leader-row .left { display:flex; gap:10px; align-items:center; }
+.leader-row .rank { width:36px; text-align:center; font-weight:700; }
+.leader-row .meta { font-size:13px; color:#333; }
+.leader-row .score { font-weight:700; min-width:60px; text-align:right; }
+
+/* small screens */
+@media (max-width:640px) {
+  .quiz-container { padding:14px; margin:12px; }
+  .answer-option { font-size:15px; }
+  .leader-row { flex-direction:column; align-items:flex-start; gap:6px; }
+}
+
+
+
+
+
