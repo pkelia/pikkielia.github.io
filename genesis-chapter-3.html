@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Chapter 3 Quiz</title>
+
+  <!-- Firebase (compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu">
+    <div class="brand">Genesis Quiz</div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section section-sky">
+<div class="quiz-container">
+  <h2>ఆదికాండము — అధ్యాయము 3 Quiz</h2>
+  <p>ప్రతి ప్రశ్నకు ఒకే సమాధానం గుర్తించండి.</p>
+
+  <!-- Q1 -->
+<div class="quiz-question">
+  దేవుడైన యెహోవా చేసిన సమస్త భూజంతువులలో ఏది యుక్తిగలదైయుండెను?
+</div>
+<div class="answer-option" data-q="1" data-correct="false">A) సింహము</div>
+<div class="answer-option" data-q="1" data-correct="true">B) సర్పము</div>
+<div class="answer-option" data-q="1" data-correct="false">C) గాడిద</div>
+<div class="answer-option" data-q="1" data-correct="false">D) ఎద్దు</div>
+
+<!-- Q2 -->
+<div class="quiz-question">
+  సర్పంతో మాట్లాడిన మొదటి వ్యక్తి ఎవరు?
+</div>
+<div class="answer-option" data-q="2" data-correct="false">A) ఆదాము</div>
+<div class="answer-option" data-q="2" data-correct="false">B) నోహు</div>
+<div class="answer-option" data-q="2" data-correct="false">C) అబ్రాహాము</div>
+<div class="answer-option" data-q="2" data-correct="true">D) హవ్వ</div>
+
+<!-- Q3 -->
+<div class="quiz-question">
+  మంచి చెడుల తెలివినుంచి ఫలమును తిన్నా రెండో వ్యక్తి ఎవరు?
+</div>
+<div class="answer-option" data-q="3" data-correct="true">A) ఆదాము</div>
+<div class="answer-option" data-q="3" data-correct="false">B) కెయిన్</div>
+<div class="answer-option" data-q="3" data-correct="false">C) అబేలు</div>
+<div class="answer-option" data-q="3" data-correct="false">D) హవ్వ</div>
+
+<!-- Q4 -->
+<div class="quiz-question">
+  ఆదాము హవ్వ ఎవరి చేతిలో మోసపోయారు?
+</div>
+<div class="answer-option" data-q="4" data-correct="false">A) దేవదూత</div>
+<div class="answer-option" data-q="4" data-correct="false">B) పక్షి</div>
+<div class="answer-option" data-q="4" data-correct="true">C) సర్పము</div>
+<div class="answer-option" data-q="4" data-correct="false">D) గాడిద</div>
+
+<!-- Q5 -->
+<div class="quiz-question">
+  దేవుడు నీకును స్త్రీకిని నీ సంతాన మునకును ఆమె సంతానమునకును ఏం కలుగజేసెదను అనెను?
+</div>
+<div class="answer-option" data-q="5" data-correct="true">A) వైరము</div>
+<div class="answer-option" data-q="5" data-correct="false">B) స్నేహము</div>
+<div class="answer-option" data-q="5" data-correct="false">C) శాంతి</div>
+<div class="answer-option" data-q="5" data-correct="false">D) ఆశీర్వాదము</div>
+
+<!-- Q6 -->
+<div class="quiz-question">
+  స్త్రీ యొక్క శాపం ఏంటి?
+</div>
+<div class="answer-option" data-q="6" data-correct="false">A) భూమిని దున్నడం</div>
+<div class="answer-option" data-q="6" data-correct="false">B) చెమట కార్చడం</div>
+<div class="answer-option" data-q="6" data-correct="false">C) పంట పండించడం</div>
+<div class="answer-option" data-q="6" data-correct="true">D) వేదనతో పిల్లలను కనడం</div>
+
+<!-- Q7 -->
+<div class="quiz-question">
+  పురుషుడు యొక్క శాపం ఏంటి?
+</div>
+<div class="answer-option" data-q="7" data-correct="false">A) సర్పముతో మాట్లాడడం</div>
+<div class="answer-option" data-q="7" data-correct="true">B) చెమట కార్చి పంట పండించడం</div>
+<div class="answer-option" data-q="7" data-correct="false">C) వేదనతో పిల్లలను కనడం</div>
+<div class="answer-option" data-q="7" data-correct="false">D) భూమి మీద నడవడం</div>
+
+<!-- Q8 -->
+<div class="quiz-question">
+  నీవు మన్నే గనుక తిరిగి మన్నైపోదువని దేవుడు ఎవరితో చెప్పెను?
+</div>
+<div class="answer-option" data-q="8" data-correct="true">A) ఆదాము</div>
+<div class="answer-option" data-q="8" data-correct="false">B) హవ్వ</div>
+<div class="answer-option" data-q="8" data-correct="false">C) కెయిన్</div>
+<div class="answer-option" data-q="8" data-correct="false">D) అబేలు</div>
+
+<!-- Q9 -->
+<div class="quiz-question">
+  జీవముగల ప్రతివానికిని తల్లి ఎవరు?
+</div>
+<div class="answer-option" data-q="9" data-correct="false">A) సారా</div>
+<div class="answer-option" data-q="9" data-correct="false">B) రూతు</div>
+<div class="answer-option" data-q="9" data-correct="true">C) హవ్వ</div>
+<div class="answer-option" data-q="9" data-correct="false">D) రాహేలు</div>
+
+<!-- Q10 -->
+<div class="quiz-question">
+  దేవుడు జీవవృక్షమునకు ఎవరిని కాపల పెట్టెను?
+</div>
+<div class="answer-option" data-q="10" data-correct="false">A) ఆదాము</div>
+<div class="answer-option" data-q="10" data-correct="false">B) హవ్వ</div>
+<div class="answer-option" data-q="10" data-correct="false">C) దేవదూత గాబ్రియేలు</div>
+<div class="answer-option" data-q="10" data-correct="true">D) కెరూబులను, ఖడ్గజ్వాలను</div>
+
+  <div class="result-box"></div>
+  <button id="submit-btn" class="btn">Submit Quiz</button>
+
+  <div class="name-box">
+      <p>మీ పేరు నమోదు చేయండి:</p>
+      <input type="text" id="player-name" placeholder="Your Name">
+      <br><br>
+      <button id="save-score-btn" class="btn">Save Score</button>
+  </div>
+
+  <br>
+  <a href="index.html" class="btn">🏠 Back to Home</a>
+
+  <h3 style="margin-top:20px">Latest Scores</h3>
+  <div id="leaderboard"></div>
+</div>
+</section>
+</body>
+</html>
