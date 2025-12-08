@@ -4,8 +4,8 @@
 (function () {
   // ---------- Books array ----------
   const books = [
-    {name:'Genesis(ఆదికాండము)', chapters:50, filePrefix:'genesis(ఆదికాండము)'},
-    {name:'Exodus(నిర్గమకాండము)', chapters:40, filePrefix:'exodus(నిర్గమకాండము)'},
+    {name:'Genesis', chapters:50, filePrefix:'genesis'},
+    {name:'Exodus', chapters:40, filePrefix:'exodus'},
     {name:'Leviticus', chapters:27, filePrefix:'leviticus'},
     {name:'Numbers', chapters:36, filePrefix:'numbers'},
     {name:'Deuteronomy', chapters:34, filePrefix:'deuteronomy'},
