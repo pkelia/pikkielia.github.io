@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Chapter 1 Quiz</title>
+
+  <!-- Firebase (compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu">
+    <div class="brand">Genesis Quiz</div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section section-sky">
+<div class="quiz-container">
+  <h2>ఆదికాండము — అధ్యాయము 46 Quiz</h2>
+  <p>ప్రతి ప్రశ్నకు ఒకే సమాధానం గుర్తించండి.</p>
+
+ 
+<!-- Q1 -->
+<div class="quiz-question">1. దేవుడు యాకోబు దర్శనంలో ఏమని చెప్పాడు?</div>
+<div class="answer-option" data-q="1" data-correct="false">a) ఐగుప్తు వెళ్ళవద్దు</div>
+<div class="answer-option" data-q="1" data-correct="false">b) కనాను లోనే ఉండుము</div>
+<div class="answer-option" data-q="1" data-correct="true">c) ఐగుప్తు వెళ్ళుటకు భయపడకము</div>
+<div class="answer-option" data-q="1" data-correct="false">d) నీ కుమారులను పంపుము</div>
+
+<!-- Q2 -->
+<div class="quiz-question">2. యాకోబు జ్యేష్ఠ కుమారుడు పేరు ఏమిటి?</div>
+<div class="answer-option" data-q="2" data-correct="false">a) యూదా</div>
+<div class="answer-option" data-q="2" data-correct="false">b) శిమ్యోను</div>
+<div class="answer-option" data-q="2" data-correct="false">c) లేవి</div>
+<div class="answer-option" data-q="2" data-correct="true">d) రూబేను</div>
+
+<!-- Q3 -->
+<div class="quiz-question">3. యోసేపు తల్లి పేరు ఏమిటి?</div>
+<div class="answer-option" data-q="3" data-correct="false">a) లేయా</div>
+<div class="answer-option" data-q="3" data-correct="false">b) బిల్హా</div>
+<div class="answer-option" data-q="3" data-correct="false">c) జిల్పా</div>
+<div class="answer-option" data-q="3" data-correct="true">d) రాహేలు</div>
+
+<!-- Q4 -->
+<div class="quiz-question">4. యాకోబు సంతానం ఐగుప్తులోకి వచ్చినవారు ఉన్నవారు మొత్తం ఎంత మంది?</div>
+<div class="answer-option" data-q="4" data-correct="false">a) 12</div>
+<div class="answer-option" data-q="4" data-correct="false">b) 40</div>
+<div class="answer-option" data-q="4" data-correct="true">c) 70</div>
+<div class="answer-option" data-q="4" data-correct="false">d) 100</div>
+
+<!-- Q5 -->
+<div class="quiz-question">5. యోసేపు తన కుటుంబంతో రాజుతో ఏమని చెప్పమన్నాడు?</div>
+<div class="answer-option" data-q="5" data-correct="false">a) మేము వ్యాపారులు</div>
+<div class="answer-option" data-q="5" data-correct="false">b) మేము యోధులు</div>
+<div class="answer-option" data-q="5" data-correct="false">c) మేము కూలీలు</div>
+<div class="answer-option" data-q="5" data-correct="true">d) పశువులు గలవారని</div>
+
+
+ 
+
+  <div class="result-box"></div>
+  <button id="submit-btn" class="btn">Submit Quiz</button>
+
+  <div class="name-box">
+      <p>మీ పేరు నమోదు చేయండి:</p>
+      <input type="text" id="player-name" placeholder="Your Name">
+      <br><br>
+      <button id="save-score-btn" class="btn">Save Score</button>
+  </div>
+
+  <br>
+  <a href="index.html" class="btn">🏠 Back to Home</a>
+
+  <h3 style="margin-top:20px">Latest Scores</h3>
+  <div id="leaderboard"></div>
+</div>
+</section>
+</body>
+</html>
