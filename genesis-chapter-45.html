@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Chapter 1 Quiz</title>
+
+  <!-- Firebase (compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu">
+    <div class="brand">Genesis Quiz</div>
+    <ul class="menu-list">
+      <li><a href="index.html">🏠 Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section section-sky">
+<div class="quiz-container">
+  <h2>ఆదికాండము — అధ్యాయము 45 Quiz</h2>
+  <p>ప్రతి ప్రశ్నకు ఒకే సమాధానం గుర్తించండి.</p>
+
+ 
+<!-- Q1 -->
+<div class="quiz-question">1. యోసేపు బిగ్గరగా ఏడ్చి తన సహోదరులతో ఏమని చెప్పెను?</div>
+<div class="answer-option" data-q="1" data-correct="false">a) మీరు నన్ను గుర్తుపట్టారా</div>
+<div class="answer-option" data-q="1" data-correct="false">b) మీరు నన్ను ఎందుకు అమ్మితిరి</div>
+<div class="answer-option" data-q="1" data-correct="false">c) మీరు భయపడవద్దు</div>
+<div class="answer-option" data-q="1" data-correct="true">d) తండ్రి బ్రతికి ఉన్నాడా</div>
+
+<!-- Q2 -->
+<div class="quiz-question">2. దేనికొరకు దేవుడు యోసేపును ముందుగా పంపించాడని తన సహోదరులతో చెప్పెను?</div>
+<div class="answer-option" data-q="2" data-correct="false">a) ఐగుప్తులో అధికారి కావుటకు</div>
+<div class="answer-option" data-q="2" data-correct="false">b) తనను గౌరవింపబడుటకు</div>
+<div class="answer-option" data-q="2" data-correct="true">c) ప్రాణరక్షణ</div>
+<div class="answer-option" data-q="2" data-correct="false">d) ధనవంతుడు కావుటకు</div>
+
+<!-- Q3 -->
+<div class="quiz-question">3. యోసేపు తన సహోదరులతో... నా తండ్రిని ఇక్కడికి తీసుకురమ్ము అని ఎందుకు చెప్పాడు?</div>
+<div class="answer-option" data-q="3" data-correct="false">a) తండ్రి వృద్ధుడు కావున</div>
+<div class="answer-option" data-q="3" data-correct="false">b) తండ్రి తనను చూడాలని</div>
+<div class="answer-option" data-q="3" data-correct="false">c) తండ్రి కష్టపడకూడదని</div>
+<div class="answer-option" data-q="3" data-correct="true">d) తండ్రి తనతో నివసించుటకై</div>
+
+<!-- Q4 -->
+<div class="quiz-question">4. ఎవరు యోసేపుతో ఇట్లనెను.. నీవు నీ సహోదరులను చూచిమీరీలాగు చేయుడి, మీ పశువులమీద బరువులు కట్టి కనాను దేశమునకు వెళ్లి మీ తండ్రిని మీ యింటివారిని వెంట బెట్టుకొని నా యొద్దకు రండి; ఐగుప్తు దేశమందలి మంచి వస్తువులను మీకెచ్చెదను, ఈ దేశముయొక్క సారమును మీరు అనుభవించెదరు?</div>
+<div class="answer-option" data-q="4" data-correct="false">a) యాకోబు</div>
+<div class="answer-option" data-q="4" data-correct="false">b) యూదా</div>
+<div class="answer-option" data-q="4" data-correct="false">c) యోసేపు</div>
+<div class="answer-option" data-q="4" data-correct="true">d) ఫరో</div>
+
+<!-- Q5 -->
+<div class="quiz-question">5. యాకోబు ఉన్న దేశం పేరు ఏమిటి?</div>
+<div class="answer-option" data-q="5" data-correct="false">a) ఐగుప్తు</div>
+<div class="answer-option" data-q="5" data-correct="true">b) కనాను</div>
+<div class="answer-option" data-q="5" data-correct="false">c) బాబెలు</div>
+<div class="answer-option" data-q="5" data-correct="false">d) హారాను</div>
+
+
+ 
+
+  <div class="result-box"></div>
+  <button id="submit-btn" class="btn">Submit Quiz</button>
+
+  <div class="name-box">
+      <p>మీ పేరు నమోదు చేయండి:</p>
+      <input type="text" id="player-name" placeholder="Your Name">
+      <br><br>
+      <button id="save-score-btn" class="btn">Save Score</button>
+  </div>
+
+  <br>
+  <a href="index.html" class="btn">🏠 Back to Home</a>
+
+  <h3 style="margin-top:20px">Latest Scores</h3>
+  <div id="leaderboard"></div>
+</div>
+</section>
+</body>
+</html>
